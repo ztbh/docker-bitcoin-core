@@ -30,7 +30,7 @@ jobs:
           LATEST_BITCOIN_MAJOR_VERSION=$(find . -type d -maxdepth 1 -not -path '*/\.*' | sort -n | tail -n 1 | cut -c 3-)
           PLATFORMS="linux/amd64"
           PUSH=false
-          REPO=${{REGISTRY}}/${{IMAGE_NAME}}
+          REPO=${{env.REGISTRY}}/${{env.IMAGE_NAME}}
           TAGS=()
 
           if [[ $GITHUB_REF == refs/tags/* ]]; then
