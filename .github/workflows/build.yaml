@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         version:
-          - '25'
+          - '26'
       fail-fast: false
     steps:
       - name: Set up Docker Buildx
